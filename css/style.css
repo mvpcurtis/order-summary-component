@@ -1,0 +1,186 @@
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+/* reset */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/* variables */
+:root {
+    --pale-blue: hsl(225, 100%, 94%);
+    --bright-blue: hsl(245, 75%, 52%);
+    --very-pale-blue: hsl(225, 100%, 98%);
+    --desaturated-blue: hsl(224, 23%, 55%);
+    --dark-blue: hsl(223, 47%, 23%);
+}
+
+/* styles */
+body {
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 1rem;
+    font-weight: normal;
+    background-color: var(--pale-blue);
+    color: var(--dark-blue);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-rendering: optimizeLegibility;
+}
+
+a:link, a:visited {
+    color: var(--bright-blue);
+    transition: background-color 0.1s ease, color 0.1s ease;
+
+}
+
+a:hover, a:active {
+    color: hsl(245, 83%, 68%);
+    cursor: pointer;
+}
+
+h2, h4 {
+    font-weight: 900;
+}
+
+p {
+    /* letter-spacing: 1px; */
+    color: var(--desaturated-blue);
+    margin-top: 1em;
+}
+
+span { 
+    color: var(--desaturated-blue);
+}
+
+.container {
+    max-width: 469px;
+    margin: 0 auto;
+}
+
+img#background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -50;
+}
+
+#hero {
+    width: 100%;
+    margin-bottom: -10px;
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
+}
+
+.card { 
+    background-color: var(--very-pale-blue);
+    padding: 2em 3.5em;
+    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 1em;
+    text-align: center;
+}
+
+.plan-type {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: hsla(225, 100%, 94%, 0.3);
+    border-radius: 0.5em;
+    padding: 1em;
+    margin-top: 2em;
+    text-align: left;
+}
+
+.plan-type > .info {
+    flex-grow: 1;
+    margin-left: 1em;
+}
+
+.buttons {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2em;
+}
+
+.buttons a:last-child {
+    margin-top: 1em;
+}
+
+.buttons a:link, .buttons a:visited {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.button:link, .button:visited { 
+    display: inline-block;
+    color: var(--desaturated-blue);
+    padding: 0.75em 1em;
+}
+
+.button:hover, .button:active {
+    color: hsl(228, 29%, 23%);
+}
+
+.proceed {
+    text-align: center;
+    width: 100%;
+    background-color: var(--bright-blue);
+    color: var(--very-pale-blue);
+    border-radius: 0.5em;
+}
+
+.proceed:link, .proceed:visited {
+    color: var(--very-pale-blue);
+}
+
+.proceed:hover, .proceed:active {
+    background-color: hsl(245, 83%, 68%);
+    color: var(--very-pale-blue);
+}
+
+#attribution {
+    margin-top: 1.5em;
+    font-size: 0.65rem;
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+#attribution > a:link, #attribution > a:visited {
+    color: var(--bright-blue);
+}
+
+/* for screen sizes 530px and lower */
+@media screen and (max-width: 530px) {
+    .container {
+        width: 90%;
+    }
+
+    .card {
+        padding: 2em 1.5em;
+    }
+
+}
+
+/* for screen sizes 362px and lower */
+@media screen and (max-width: 362px) {
+    .plan-type {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .plan-type > .info {
+        margin: 1em 0;
+    }
+}
