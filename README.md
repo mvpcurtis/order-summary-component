@@ -6,6 +6,9 @@ This is my solution to the [Order summary card challenge on Frontend Mentor](htt
 
 ## Overview:
 
+### Live Demo:
+https://mvpcurtis.github.io/order-summary-component/
+
 ### Screenshots:
 ![](./images/screenshots/screenshot-desktop.png)
 ![](./images/screenshots/screenshot-mobile.png)
